@@ -1,0 +1,53 @@
+class Solution {
+
+    public boolean stoneGameIX(int[] stones) {
+
+        int[] count = new int[3];
+
+        // Count remainders
+        for (int stone : stones) {
+            count[stone % 3]++;
+        }
+
+        // Try Alice starting with remainder 1
+        if (canWin(count[0], count[1], count[2])) {
+            return true;
+        }
+
+        // Try Alice starting with remainder 2
+        return canWin(count[0], count[2], count[1]);
+    }
+
+    private boolean canWin(int zero, int one, int two) {
+
+        // Alice must have a stone with this remainder
+        if (one == 0) {
+            return false;
+        }
+
+        // Alice removes one stone
+        one--;
+
+        // Then players are forced to alternate
+        // between remainder 1 and remainder 2
+        int pairs = Math.min(one, two);
+
+        int length = 1 + 2 * pairs;
+
+        one -= pairs;
+        two -= pairs;
+
+        // If a remainder-1 stone is still available
+        if (one > 0) {
+            length++;
+            one--;
+        }
+
+        // Remainder-0 stones don't change the sum
+        length += zero;
+
+        // If odd number of safe moves remain and
+        // some non-zero stone is still available, Alice wins
+        return length % 2 == 1 && (one + two > 0);
+    }
+}
