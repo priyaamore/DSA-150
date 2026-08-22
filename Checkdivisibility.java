@@ -4,7 +4,7 @@ class Solution {
         int digitSum = 0;
         int digitProduct = 1;
         int original = n;
-
+//Apply condition
         while(n>0){
             int digit = n%10;
             n = n/10;
