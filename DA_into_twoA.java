@@ -1,5 +1,4 @@
 class Solution {
-
     public int[] resultArray(int[] nums) {
         int n = nums.length;
         List<Integer> arr1 = new ArrayList<>();
