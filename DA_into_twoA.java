@@ -22,5 +22,4 @@ class Solution {
             res[idx++] = x;
         }
         return res;
-    }
-}
+    }}
