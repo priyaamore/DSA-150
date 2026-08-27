@@ -2,8 +2,6 @@ package Stack;
 import java.util.*;
 
 public class Next_greater {
-
-
     public static void main(String[]args){
         int arr[] = {5,7,8,6,0,1};
         Stack<Integer> s = new Stack<>();
