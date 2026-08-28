@@ -8,7 +8,7 @@ class Solution {
         for (int i = 2; i < n; i++) {
             if (arr1.get(arr1.size() - 1) > arr2.get(arr2.size() - 1)) {
                 arr1.add(nums[i]);
-            } else {
+            }else {
                 arr2.add(nums[i]);
             }
         }
