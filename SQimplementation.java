@@ -7,8 +7,7 @@ public class SQimplementation {
         Deque<Integer> d = new LinkedList<>();
         public  void push(int data){
             d.addLast( data);
-
-        }
+         }
         public int pop(){
             return d.removeLast();
         }
@@ -32,8 +31,7 @@ public class SQimplementation {
           return  q.getFirst();
 
         }
-        
-    }
+     }
     
        public static void main(String []args){
         Queue q = new Queue();
@@ -45,8 +43,6 @@ public class SQimplementation {
         System.out.print(q.peek());
 
 
-       }
-    
-    
+       }    
     }
 
